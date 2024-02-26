@@ -11,7 +11,7 @@ class Mate:
         # Create the folder for Metabase Mate
         self.__home_path = path.expanduser("~")
         # print('Home path:', self.__home_path)
-        folder_path = f'{self.__home_path}/.metabase_mate'
+        folder_path = os.path.join(self.__home_path, ".metabase_mate")
         if not path.exists(folder_path):
             try:
                 mkdir(folder_path)
@@ -19,10 +19,10 @@ class Mate:
             except Exception as e:
                 print(f'Error creating folder: {folder_path}: {e}')
 
-        self.__base_url = self.__load_or_set_data("Metabase API URL", f'{folder_path}/.mate_base_url', metabase_api_url)
+        self.__base_url = self.__load_or_set_data("Metabase API URL", os.path.join(folder_path, '.mate_base_url'), metabase_api_url)
         if self.__base_url[-1] == '/':
             self.__base_url = self.__base_url[:-1]
-        session_id = self.__load_or_set_data("Session ID", f'{folder_path}/.mate_session_id', session_id)
+        session_id = self.__load_or_set_data("Session ID", os.path.join(folder_path, '.mate_session_id'), session_id)
 
         self.__session = requests.Session()
         self.__session.headers.update({'X-Metabase-Session': session_id})
