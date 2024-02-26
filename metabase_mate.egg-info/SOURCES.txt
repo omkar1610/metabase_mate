@@ -1,3 +1,5 @@
+LICENSE
+README.md
 setup.py
 metabase_mate/__init__.py
 metabase_mate.egg-info/PKG-INFO
