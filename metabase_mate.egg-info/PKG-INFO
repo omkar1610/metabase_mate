@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: metabase-mate
+Version: 1.1.0
+Summary: Mate is a Python utility module that automates repetitive tasks in the Metabase UI, saving time and effort. It provides functionality to edit existing questions by adding new linked filters and updating older filters. Additionally, Mate can replicate dashboards with linked filters and apply partner-specific or static conditions to each question within the dashboard.
+Home-page: https://github.com/omkar1610/metabase_mate
+Author: Omkar Ashrit
+Author-email: omkar.ashrit@gmail.com
